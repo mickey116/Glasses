@@ -1,9 +1,10 @@
 // header
 // navbar
 header {
+  background-color: $primaryColor;
   nav {
-    padding: 30px 88px;
-    background-color: $primaryColor;
+    padding: 30px 0;
+
     display: flex;
     justify-content: space-between;
 
@@ -27,7 +28,7 @@ header {
 @include pad {
   header {
     nav {
-      padding: 30px 39px;
+      padding: 30px 0;
 
       .topmenu {
         li {
