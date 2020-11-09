@@ -1,0 +1,297 @@
+// header
+// navbar
+header {
+  nav {
+    padding: 30px 88px;
+    background-color: $primaryColor;
+    display: flex;
+    justify-content: space-between;
+
+    .topmenu {
+      font-size: 20px;
+      display: flex;
+      align-self: center;
+
+      li {
+        margin-left: 64px;
+
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+
+}
+
+@include pad {
+  header {
+    nav {
+      padding: 30px 39px;
+
+      .topmenu {
+        li {
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+}
+
+@include phone {
+  header {
+    nav {
+      padding: 0;
+      flex-direction: column;
+
+      h1 {
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      .topmenu {
+        flex-wrap: wrap;
+        align-self: stretch;
+
+        li {
+          width: 50%;
+          padding: 8px 0;
+          margin-left: 0px;
+          text-align: center;
+          border: 1px solid white;
+        }
+
+      }
+    }
+  }
+}
+
+// footer
+footer {
+  background-color: $primaryColor;
+  color: white;
+  padding-top: 36px;
+  padding-bottom: 28px;
+
+  a {
+    color: white;
+
+    &:hover {
+      border-bottom: 1px solid white;
+    }
+  }
+
+  .footerinfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+
+    .fmenu {
+      display: flex;
+      align-self: center;
+
+      li {
+        margin-right: 48px;
+      }
+    }
+
+    .socialicon {
+      display: flex;
+
+      li {
+        margin-left: 32px;
+      }
+    }
+
+  }
+
+  .contact {
+    padding-bottom: 20px;
+    font-size: 32px;
+
+    li {
+      display: flex;
+      margin-bottom: 19px;
+
+      a {
+        align-self: center
+      }
+
+      img {
+        margin-right: 12px;
+      }
+
+      &:first-of-type {
+        img {
+          margin-right: 23px;
+        }
+      }
+    }
+
+  }
+
+  .privacy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid white;
+    padding-top: 24px;
+
+    .copyright {
+      display: flex;
+
+      img {
+        margin-right: 38px;
+      }
+
+      p {
+        align-self: center;
+      }
+    }
+
+    .policy {
+      display: flex;
+      font-size: 14px;
+
+      li {
+        margin-left: 62px;
+      }
+    }
+  }
+}
+
+@include pad {
+  footer {
+    padding: 40px 48px;
+
+    .footerinfo {
+      margin-bottom: 26px;
+
+      .fmenu {
+        li {
+          margin-right: 40px;
+        }
+
+      }
+
+      .socialicon {
+        li {
+          margin-left: 24px;
+
+          img {
+            width: 24px;
+          }
+        }
+      }
+    }
+
+    .contact {
+      font-size: 20px;
+
+      li {
+        margin-bottom: 0px;
+
+        img {
+          width: 24px;
+          margin-right: 12px;
+        }
+
+        &:first-of-type {
+          margin-bottom: 12px;
+
+          img {
+            margin-right: 12px;
+          }
+        }
+      }
+
+    }
+
+    .privacy {
+      .copyright {
+        img {
+          display: none
+        }
+      }
+
+      .policy {
+        li {
+          margin-left: 24px;
+        }
+      }
+    }
+  }
+}
+
+@include phone {
+  footer {
+    padding: 24px 15px;
+
+    .footerinfo {
+      margin-bottom: 0;
+      position: relative;
+
+      .fmenu {
+        display: none;
+      }
+
+      .socialicon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+
+    .contact {
+      padding-bottom: 24px;
+      font-size: 16px;
+
+      li {
+        margin-bottom: 8px;
+
+        img {
+          width: 20px;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    .privacy {
+      padding-top: 18px;
+      font-size: 14px;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+
+      .copyright {
+        flex-direction: row-reverse;
+        margin-bottom: 7px;
+
+        img {
+          display: block;
+          width: 46px;
+          margin-right: 0;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+      }
+
+      .policy {
+        flex-direction: column;
+        align-items: flex-start;
+
+        li {
+          margin-left: 0;
+
+          &:first-of-type {
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+}
